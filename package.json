@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
     "gulp-notify": "^2.2.0"
   }
 }

@@ -1,24 +1,20 @@
 # AngularJS exercise & refactoring playground
 
-## Topics
+Mit dem vorliegenden Beispielcode können Refactoring-Szenarien diskutiert und geübt werden.
 
-+ Javascript basics
-+ Structuring an angularjs app
-+ AngularJS module system
+
+## Topics
+Der Fokus liegt auf folgenden Themen:
+
++ Software Architektonische Aspekte (wie z.B. SOLID)
++ Refactoring Grundlagen
++ Javascript Grundlagen
++ Einsatz der AngularJS Elemente
++ Framework spezifisches Modularisierungssystem
 + Routing
++ Direktiven
 + Dynamic behavior
 + Dependency Mgmt
 + Debugging
 + Unit-Testing
 
-- AngularJS promises
-
-- Dependency Mgmt
-- Unit-Testing
-- Debugging
-
-
-<!-- 1. AngularJS module system, creating tiny pieces of functionality -->
-  <!-- 2. Routing ($routeProvider), how do we get pages to transition -->
-  <!-- 3. Dynamic Behaviour ($scope), how we avoid writing a lot of DOM manipulation code -->
-  <!-- 4. Extending the semantics of HTML with angular directives -->
