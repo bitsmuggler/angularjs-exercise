@@ -1,6 +1,14 @@
-# AngularJS exercise & refactoring playground
+# AngularJS refactoring playground
 
 Mit dem vorliegenden Beispielcode können Refactoring-Szenarien diskutiert und geübt werden.
+
+##Szenario
++ Die Anwendung besteht aus zwei Ansichten.
+    + Der Anmeldedialog - bestehend aus einer Eingabe für Benutzername 'foo' und Passwort 'password'.
+    + Der Bilderansicht - bestehend aus zwei Bilder mit hinterlegten Metadaten, welche per Mouse-Hover gelesen werden können.
++ Der Benutzer gelangt zuerst auf die Login Sicht und gibt die Benutzerdaten ein.
+    + Bei gültigen Benutzerdaten gelangt der Benutzer auf die Bilderansicht.
+    + Bei ungültigen Benutzerdaten erscheint eine Benachrichtigung.
 
 
 ## Topics
@@ -10,11 +18,11 @@ Der Fokus liegt auf folgenden Themen:
 + Refactoring Grundlagen
 + Javascript Grundlagen
 + Einsatz der AngularJS Elemente
-+ Framework spezifisches Modularisierungssystem
 + Routing
 + Direktiven
 + Dynamic behavior
 + Dependency Mgmt
-+ Debugging
 + Unit-Testing
++ Debugging
+
 
