@@ -1,3 +1,16 @@
+# AngularJS exercise & refactoring playground
+
+## Topics
+
++ Javascript basics
++ Structuring an angularjs app
++ AngularJS module system
++ Routing
++ Dynamic behavior
++ Dependency Mgmt
++ Debugging
++ Unit-Testing
+
 - AngularJS promises
 
 - Dependency Mgmt

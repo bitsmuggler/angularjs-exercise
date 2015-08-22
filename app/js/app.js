@@ -1,81 +1,91 @@
 var app = angular.module("app", ['ngRoute'])
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $controllerProvider) {
 
   $routeProvider.when('/login', {
     templateUrl: 'login.html',
-    controller: 'LoginController'
+    controller: 'myController'
   });
 
   $routeProvider.when('/home', {
     templateUrl: 'home.html',
-    controller: 'HomeController'
+    controller: 'myController'
   });
 
   $routeProvider.otherwise({ redirectTo: '/login' });
 
-});
+    $controllerProvider.register('myNavController', function($rootScope, $scope) {
+      $scope.username = '';
 
-app.factory("AuthenticationService", function($location, LoginContext) {
-  return {
-    login: function(credentials, successCallback, errorCallback) {
-        if (credentials.username !== "foo" || credentials.password !== "password") {
-          if(errorCallback) {
-            errorCallback();
-          }
-        } else {
-        if(successCallback) {
-          successCallback();
-        }
-        LoginContext = 'foo';
-      }
-    },
-    logout: function() {
-      $location.path('/login');
-    }
-  };
-});
-
-app.controller("LoginController", function($scope, $location, AuthenticationService, LoginContext) {
-  $scope.credentials = { username: "", password: "" };
-
-  $scope.login = function() {
-    AuthenticationService.login($scope.credentials, function() {
-      $location.path('/home');
-    }, function() {
-      alert('error at login');
+      $rootScope.$on('onLoginSuccess', function(data, args) {
+        console.log(data);
+        console.log('getting username ' + args.username);
+        $scope.username = args.username;
+      });
     });
-  }
-});
 
-app.controller("NavbarController", function($scope, $location, AuthenticationService, LoginContext) {
-  $scope.username = LoginContext;
-});
+    $controllerProvider.register('myController', function($rootScope, $scope, $location) {
+      var LoginContext = '';
 
-app.controller("HomeController", function($scope, AuthenticationService) {
-  $scope.title = "Awesome Home";
-  $scope.message = "Mouse Over these images to see a directive at work!";
+      $scope.credentials = { username: "", password: "" };
 
-  $scope.logout = function() {
-    AuthenticationService.logout();
-  };
-});
+      function init() {
 
-app.value("LoginContext", "");
+        var leaveMessage = "Hover the image!"
 
-app.directive("showsMessageWhenHovered", function() {
-  return {
-    restrict: "A", // A = Attribute, C = CSS Class, E = HTML Element, M = HTML Comment
-    link: function(scope, element, attributes) {
-      var originalMessage = scope.message;
-      element.bind("mouseenter", function() {
-        scope.message = attributes.message;
-        scope.$apply();
-      });
-      element.bind("mouseleave", function() {
-        scope.message = originalMessage;
-        scope.$apply();
-      });
-    }
-  };
+        $('#image1').bind('mouseenter', function(){
+          $scope.message = "Mouse on house 1.";
+          $scope.$apply();
+        });
+
+        $('#image2').bind('mouseenter', function(){
+          $scope.message = "Mouse on house 2.";
+          $scope.$apply();
+        });
+
+        $('#image1').bind('mouseleave', function(){
+          $scope.message = leaveMessage;
+          $scope.$apply();
+        });
+
+        $('#image2').bind('mouseleave', function(){
+          $scope.message = leaveMessage;
+          $scope.$apply();
+        });
+      }
+
+      $scope.login = function(credentials) {
+
+        var result = checkCredentials($scope.credentials);
+
+        if(result == 1) {
+          $rootScope.$broadcast('onLoginSuccess', {username: $scope.credentials.username});
+          $location.path('/home');
+        } else {
+          alert('error at login');
+        }
+      };
+
+      function checkCredentials(credentials) {
+        if (credentials.username !== "foo"
+            || credentials.password !== "password") {
+          return false;
+        } else {
+          LoginContext = 'foo';
+          $scope.username = 'foo';
+          $scope.$apply();
+          return true;
+        }
+      };
+
+      $scope.logout = function() {
+        logout();
+      }
+
+      function logout() {
+        $location.path('#');
+      }
+
+      init();
+    });
 });
