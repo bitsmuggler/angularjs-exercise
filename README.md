@@ -17,7 +17,7 @@ Der Fokus liegt auf den folgenden Themen:
 + Refactoring Grundlagen
     + Unit-Tests Grundlage schaffen und laufen durch
     + Bad smells erkennen
-    + Javascript Grundlagen
++ Javascript Grundlagen
 + AngularJS Grundlagen
     + Aufbau einer AngularJS Anwendung
         + Erklärung Pattern MV* (MVC/MVVM)
