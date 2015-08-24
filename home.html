@@ -1,22 +1,25 @@
-<div id="home" class="row">
-  <div class="large-6 large-offset-3">
-    <h2>Welcome to the Home page!</h2>
-
-    <div class="alert-box">This is a static message</div>
-
-    <ul class="small-block-grid-2">
-      <li>
-        <img class="th" src="app/img/demo1.jpg">
-      </li>
-      <li>
-        <img class="th" src="app/img/demo2.jpg">
-      </li>
-    </ul>
-
-    <div class="row">
-      <div class="large-12 columns">
-        <button class="button large expand radius">Log Out</button>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-lg-12">
+    <p class="bg-success">{{message}}</p>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <img id="image1" src="app/img/demo1.jpg" shows-message-when-hovered message="I'm the first house."  alt="Image1" class="img-thumbnail">
+  </div>
+  <div class="col-md-6">
+    <img id="image2" shows-message-when-hovered message="I'm the second house." src="app/img/demo2.jpg" alt="Image2" class="img-thumbnail">
+  </div>
+</div>
+<div class="row"></div>
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-4">
+    <button class="btn btn-default" ng-click="logout()" style="margin-top: 20px;">Logout</button>
+  </div>
+</div>
+
+
+
+

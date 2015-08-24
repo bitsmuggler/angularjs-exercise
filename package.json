@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.0.1",
+    "gulp-jasmine-browser": "^0.2.3",
+    "gulp-jshint": "^1.11.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-util": "^3.0.6",
+    "jasmine-reporters": "^2.0.7"
+  }
+}

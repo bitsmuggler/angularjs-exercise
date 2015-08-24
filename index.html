@@ -1,33 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <title>An Introduction to Angular.JS</title>
-  <link rel="stylesheet" href="vendor/css/normalize.css">
-  <link rel="stylesheet" href="vendor/css/foundation.min.css">
+  <title>AngularJS refactoring playground</title>
+  <link rel="stylesheet" href="vendor/css/bootstrap.css">
   <link rel="stylesheet" href="app/css/style.css">
+  <script src="vendor/js/jquery.js"></script>
   <script src="vendor/js/angular.js"></script>
   <script src="vendor/js/angular-route.js"></script>
   <script src="app/js/app.js"></script>
 </head>
 <body>
-  <div class="row">
-    <div class="large-12">
-      <h1>Introduction to Angular.JS</h1>
-      <div id="view"></div>
+
+<nav class="navbar navbar-default" ng-controller="myNavController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Playground</a>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#">Hello {{username}}</a></li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Logout</a></li>
+      </ul>
     </div>
   </div>
-  <!-- We are going to build a very simple web application that allows users to login, logout, and view a couple of nice pictures that demonstrate a few of AngularJS features. -->
+</nav>
 
-  <!-- Things we want to cover today: -->
 
-  <!-- 1. AngularJS module system, creating tiny pieces of functionality -->
-  <!-- 2. Routing ($routeProvider), how do we get pages to transition -->
-  <!-- 3. Dynamic Behaviour ($scope), how we avoid writing a lot of DOM manipulation code -->
-  <!-- 4. Extending the semantics of HTML with angular directives -->
-
-  <!-- Things we can get to if we have time -->
-
-  <!-- a. how angular does dependency injection -->
+  <div class="container">
+    <h1>AngularJS Playground</h1>
+      <div id="view" ng-view=""></div>
+  </div>
 </body>
 </html>
