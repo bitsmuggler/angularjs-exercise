@@ -10,19 +10,60 @@ Mit dem vorliegenden Beispielcode können Refactoring-Szenarien diskutiert und g
     + Bei gültigen Benutzerdaten gelangt der Benutzer auf die Bilderansicht.
     + Bei ungültigen Benutzerdaten erscheint eine Benachrichtigung.
 
+## Themen
+Der Fokus liegt auf den folgenden Themen:
 
-## Topics
-Der Fokus liegt auf folgenden Themen:
-
-+ Software Architektonische Aspekte (wie z.B. SOLID)
++ Software-Architektonische Aspekte wie z.B. SOLID
 + Refactoring Grundlagen
-+ Javascript Grundlagen
-+ Einsatz der AngularJS Elemente
-+ Routing
-+ Direktiven
-+ Dynamic behavior
+    + Unit-Tests Grundlage schaffen und laufen durch
+    + Bad smells erkennen
+    + Javascript Grundlagen
++ AngularJS Grundlagen
+    + Aufbau einer AngularJS Anwendung
+        + Erklärung Pattern MV* (MVC/MVVM)
+    + Erkennen bzw. Erklären der Konzepte in AngularJS wie z.B.
+        + Scopes
+        + Data Binding (Two-Way Binding vs. One-Way Binding)
+        + Depdendency Injection & Injector
+        + Templates
+        + Expressions
+        + Filters
+        + Direktiven
+        + Modules
+        + Routing
 + Dependency Mgmt
+    + Optimierung -> Einsatz z.B. von Bower
 + Unit-Testing
 + Debugging
++ Automatisierung & Optimierung
+    + Notwendigkeit und Potential der Automatisierung erkennen, wie z.B.
+        + Serve bzw. Watchers
+        + Browser Sync
+        + Wireing von Abhängigkeiten
+        + Automatisierung von (Unit-)Tests
+    + Notwendigkeit der Optmierung erkennen, wie z.B.
+        + Minification
+        + Konkatenierung
+        + Vendor-Prefixes
+        + ngAnnotate
+        + File Suffixes
 
+## Aufsetzen der Umgebung
 
+```bash
+npm install
+```
+
+## Gulp Tasks
+
+Folgende Gulp-Tasks stehen zur Verfügung:
+
+Starten der Überprüfung der Codierrichtlinien:
+```bash
+gulp jshint
+```
+
+Starten der "imaginären" Unit-Tests:
+```bash
+gulp test
+```
