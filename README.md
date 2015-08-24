@@ -58,6 +58,12 @@ npm install
 
 Folgende Gulp-Tasks stehen zur Verfügung:
 
+Starten der gesamten Umgebung:
+```bash
+gulp
+```
+
+
 Starten der Überprüfung der Codierrichtlinien:
 ```bash
 gulp jshint
@@ -66,4 +72,9 @@ gulp jshint
 Starten der "imaginären" Unit-Tests:
 ```bash
 gulp test
+```
+
+Starten des Webservers:
+```bash
+gulp connect
 ```
