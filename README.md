@@ -15,8 +15,8 @@ Der Fokus liegt auf den folgenden Themen:
 
 + Software-Architektonische Aspekte wie z.B. SOLID
 + Refactoring Grundlagen
-    + Unit-Tests Grundlage schaffen und laufen durch
-    + Bad smells erkennen
+    + Basis für Refactoring schaffen
+    + Bad smells erkennen, beheben & testen
 + Javascript Grundlagen
 + AngularJS Grundlagen
     + Aufbau einer AngularJS Anwendung
