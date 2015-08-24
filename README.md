@@ -31,6 +31,7 @@ Der Fokus liegt auf den folgenden Themen:
         + Direktiven
         + Modules
         + Routing
++ AngularJS und die Integration mit anderen JS-Frameworks, wie z.B. JQuery, ZeptoJS vs. JQlite
 + Dependency Mgmt
     + Optimierung -> Einsatz z.B. von Bower
 + Unit-Testing
